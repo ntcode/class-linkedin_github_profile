@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Class Data</title>
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="/assets/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/app.js"></script>
+    <!-- LINKS -->
+    <link rel="stylesheet" href="/assets/styles/style.css"/>
+  </head>
+  <body>
+    <div ng-controller="IntroController">
+      <button ng-click= "getData()">show students</button>
+      <div ng-repeat= "key in allStudents">
+        <div class="personRow">
+          <p>
+            {{key.name}}:
+            <a href="{{key.github}}">GitHub</a><br>
+            <img src="{{key.linkedIn}}" alt="student picture" height="80" width="80">
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
